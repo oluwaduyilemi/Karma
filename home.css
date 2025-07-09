@@ -10,6 +10,7 @@
     background-size: cover;
     height: 100vh ;
     width: 100%;
+    overflow-x: hidden;
     /* background-color: ;
     background-blend-mode: overlay; */
 }
@@ -17,8 +18,7 @@
     width: 1100px;
     margin: 0 auto;
     height: 100vh;
-    padding-top: 40px;
-
+    padding-top: 50px;
 }
 nav{
     background-color: rgb(248, 247, 247);
@@ -40,11 +40,16 @@ nav{
 .nav-wrap ul li{
     list-style: none;
 }
+.fa-solid {
+  font-weight:600;
+  color: #222222;
+}
 .nav-wrap ul li a{
     text-decoration: none;
     color: #222222;
-    font-size: 14px;
-    text-transform: capitalize;
+    font-size: 13px;
+    font-weight:600;
+    text-transform: uppercase;
 }
 .nav-wrap ul li a span{
     color: #ffba00;
@@ -64,13 +69,6 @@ ul {
 ul li {
   position: relative;
 }
-
-ul li a {
-  text-decoration: none;
-  color: black;
-  padding: 8px 12px;
-}
-
 .dropdown-menu {
   display: none;
   visibility: hidden;
@@ -80,23 +78,169 @@ ul li a {
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   min-width: 200px;
   background-color: rgb(248, 247, 247);
-    min-height: 200px;
-padding: 20px;
+    /* min-height: 200px;
+padding: 20px; */
+color: #ffba00;
 }
 
 .dropdown-menu li {
   width: 100%;
+  border-bottom: #ebe8e8 1px solid;
+  padding: 12px;
 }
 
-.dropdown-menu li  {
-  /* padding: 10px; */
-  padding-bottom: 40px;
+.dropdown-menu .ahre{
   color:#ffba00;
-  /* font-size: 94px; */
-  /* border: 3px solid red; */
+  text-transform: uppercase;
+  font-size: 13px;
 }
 
 .dropdown:hover .dropdown-menu {
   display: block;
   visibility: visible;
+}
+.nike-new{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  /* border: 2px solid red;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: mandatory;
+  width: 100vw; */
+}
+/* .nike-new::-webkit-scrollbar{
+  display: none;
+}
+.hero-slide{
+  flex:0 0 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+} */
+.nike-new .text h1{
+    font-size: 50px;
+    text-transform: uppercase;
+    color: #222222;
+  font-family:Arial, Helvetica, sans-serif;
+  margin-bottom: 35px;
+}
+.nike-new .text p{
+  color: grey;
+  line-height: 25px;
+  font-size: 17px;
+  font-family:Arial, Helvetica, sans-serif;
+}
+.add-bag{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top  : 30px;
+
+}
+.add-bag i{
+  background: linear-gradient(to right, #f7b606, #f78c01);
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 30px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.nike-new .add-bag p{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 13px;
+  color: #222222;
+}
+.service{
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+}
+.service-wrapper{
+    width: 1100px;
+    margin: 0 auto;
+    /* border: 3px solid red; */
+    margin-top: 120px;
+}
+.our-service{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(253, 252, 252);
+  padding: 50px 30px;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 2) ;
+}
+.policy{
+  text-align: center;
+}
+.policy h2{
+  padding-top: 16px;
+  font-size: 15px;
+  color: #222222;
+}
+.policy p{
+  color: grey;
+  font-size: 14px;
+  padding-top: 5px;
+}
+.shores{
+  border: 2px solid red;
+  margin-top: 90px;
+  height: 66vh;
+}
+.white-shore{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sport-shore{
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 159%;
+  left: 137px;
+  gap: 20px;
+}
+.nike{
+  height: 27vh;
+  width: 30%;
+}
+
+.black-shore {
+  /* position: absolute; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 179%;
+  gap: 20px;
+}
+.grey{
+  position: absolute;
+  top: 191%;
+  left: 137px;
+   height: 27vh;
+  
+}
+.push{
+    position: absolute;
+  top: 191%;
+  right: 510px;
+   height: 27vh;
+}
+.mic{
+  position: absolute;
+  right: 129px;
+  top: 159%;
+  height: 50vh;
+  border: 2px solid red;
+
 }
