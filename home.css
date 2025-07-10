@@ -431,6 +431,15 @@ height: 39vh;
   align-items: center;
   gap: 10px;
 }
+.icon-container{
+  display: inline-flex;
+  align-items: center ;
+  gap: 5px;
+  cursor: pointer;
+  position: relative;
+  /* overflow: hidden; */
+  
+}
 .fa-solid{
   background-color: #8f96b6;
   height: 30px;
@@ -443,8 +452,32 @@ height: 39vh;
   justify-content: center;
   color: white;
 }
+.icon-container.hover-text{
+  transform: translateX(-10px);
+  opacity: 0;
+  transition: all 0.3s ease;
+  margin-left: 0;
+  white-space: nowrap;
+  /* overflow: hidden; */
+  max-width: 0;
+}
 .fa-solid:hover{
-  background-color:#f7b606;
+  background: linear-gradient(to right, #f7b606, #f78c01);
+
+}
+.icon-container:hover .hover-text{
+  opacity: 1;
+  margin-left: 6px;
+  transition:  0.9s ease;
+  max-width: 100px;
+  display: inline;
+}
+.hover-text{
+  text-transform: uppercase;
+  font-size: 12px;
+  display: none;
+  font-weight: 700;
+  color: #222222;
 }
 .fa-brands{
   background-color: #828bb2;
@@ -460,5 +493,5 @@ height: 39vh;
   font-weight:lighter;
 }
 .fa-brands:hover{
-  background-color: #f7b606;
+  background: linear-gradient(to right, #f7b606, #cf7807);
 }
