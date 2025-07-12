@@ -630,3 +630,81 @@ height: 39vh;
   text-transform: uppercase;
   font-size: 13px;
 }
+.premium{
+  height: 113vh;
+  width: 100%;
+}
+.premium-wrapper{
+  width: 1100px;
+  margin: 0 auto;
+}
+.creative-cont{
+  padding-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.creative-cont img{
+  filter:opacity(25%);
+}
+.creative-cont img:hover{
+  filter:opacity(100%);
+}
+.deal-week{
+  text-align: center;
+  margin-top: 50px;
+}
+.deal-week h1{
+  color: #222222;
+  font-size: 40px;
+}
+.deal-week p{
+  padding-top: 8px;
+  width: 420px;
+  margin: 0 auto;
+  color: #3a3737;
+  font-size: 15px;
+  line-height: 23px;
+}
+.black-lace-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.black-lace{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+  align-items: center;
+  justify-content: space-between;
+}
+.lace{
+  margin-left: 25px;
+}
+.black-lace .lace{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.lace .price h3{
+  color: #222222;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.lace .price p{
+  padding-top: 10px;
+  font-size: 15px;
+}
+.lace .price p span{
+  text-decoration: line-through;
+  color: gray;
+  padding-left: 10px;
+}
+.black-lace-mic img{
+  height: 47vh;
+  width: 100%;
+  margin-top: 30px;
+}
