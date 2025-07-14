@@ -712,19 +712,23 @@ height: 39vh;
 .footer{
   height: 70vh;
   background-color:#222222;
-  border: 2px solid red;
   color: white;
 }
 .footer-wrapper{
    width: 1100px;
   margin: 0 auto;
+  margin-top: 50px;
+  padding-top: 40px;
+}
+.flex-footer{
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 30px;
-  margin-top: 50px;
 }
-
+.about-us{
+  width: 50%;
+}
 .about-us h2{
    font-size: 19px;
    padding-bottom: 30px;
@@ -734,7 +738,7 @@ height: 39vh;
    color: gray;
 }
 .newsletter{
-  width: 80%;
+  width: 50%;
   /* height: 20vh; */
 }
 .newsletter h2{
@@ -750,11 +754,12 @@ height: 39vh;
   background-color: white;
   color: #808080;
   padding:9px 10px ;
-  width: 100%;
+  width: 94%;
   border: none;
   position: relative;
 }
-.enter-email i{position: absolute;
+.enter-email i{
+  position: absolute;
   background: linear-gradient(to right, #f7b606, #eb8501);
   position: absolute;
   width: 45px;
@@ -763,6 +768,50 @@ height: 39vh;
   color: white;
   font-weight:bolder ;
   font-size: 18px;
-  top: 656.9%;
-  left: 49.8%;
+  top: 655.2%;
+  left: 48.7%;
+}
+.instagram{
+  margin-top: 43px;
+  padding-right: 20px;
+}
+.instagram h1{
+  font-size: 19px;
+   padding-bottom: 18px;
+}
+.instagram .instagram-pic{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+.follow-us{
+  width: 30%;
+  margin-bottom: 14px;
+}
+.follow-us h3{
+  font-size: 19px;
+   padding-bottom: 18px;
+}
+.follow-us p{
+   font-size: 14px;
+   color: gray;
+   padding-bottom: 20px;
+}
+.social-handle{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.social-handle i{
+  background-color: initial;
+  color: #808080;
+}
+.footer-wrapper h4{
+  padding-top: 90px;
+  text-align: center;
+  color: #808080;
+  font-size: 15px;
+}
+.footer-wrapper h4 span{
+  color: #f7b606;
 }
