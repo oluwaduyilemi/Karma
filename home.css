@@ -26,6 +26,13 @@ nav{
     padding: 15px 0px;
     /* position: fixed;
   width: 100%; */
+    position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white; /* or whatever color fits your design */
+  z-index: 1000; /* make sure it stays on top of other elements */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* optional: soft shadow */
 }
 .nav-wrap{
     width: 1000px;
@@ -103,6 +110,33 @@ color: #ffba00;
   
 }
 
+/* Banner text fade-in + slide */
+#banner {
+  padding-top: 100px; /* Adjust this based on your nav height */
+}
+#banner .text {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlideUp 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeSlideUp {
+  to { opacity:1; transform: translateY(0); }
+}
+
+/* Hero image slight zoom on load */
+#banner .hero-shore img {
+  transform: scale(1.05);
+  opacity: 0;
+  animation: zoomFadeIn 1.2s ease-out forwards;
+  animation-delay: 0.7s;
+}
+
+@keyframes zoomFadeIn {
+  to { transform: scale(1); opacity:1; }
+}
+
 .dropdown:hover .dropdown-menu {
   display: block;
   visibility: visible;
@@ -143,6 +177,36 @@ color: #ffba00;
   font-size: 17px;
   font-family:Arial, Helvetica, sans-serif;
 }
+.add-bag, .add-bag-two {
+  display: inline-flex;
+  align-items: center;
+  background: rgb(248, 247, 247);
+  color: #fff;
+  padding: 0.8em 1.5em;
+  border-radius: 30px;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s;
+}
+.add-bag:hover {
+  animation: jello-horizontal 0.9s both, glow 1.5s infinite;
+  transform: scale(1.05);
+}
+
+@keyframes jello-horizontal {
+  0%, 100% { transform: scale3d(1,1,1); }
+  30% { transform: scale3d(1.25,0.75,1); }
+  40% { transform: scale3d(0.75,1.25,1); }
+  50% { transform: scale3d(1.15,0.85,1); }
+  65% { transform: scale3d(0.95,1.05,1); }
+  75% { transform: scale3d(1.05,0.95,1); }
+}
+
+@keyframes glow {
+  0%, 100% { text-shadow: 0 0 10px rgba(0,123,255,0.8); }
+  50% { text-shadow: 0 0 20px rgba(0,123,255,1); }
+}
+
 .add-bag{
   display: flex;
   align-items: center;
@@ -243,6 +307,7 @@ color: #ffba00;
   font-weight: bold;
   
 }
+
 .arr-two:hover .sec{
   opacity: 1;
 }
@@ -361,9 +426,32 @@ color: #ffba00;
 .mic:hover .overlay{
   opacity: 1;  
 }
+/* Animation keyframes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation style */
+.service .policy {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-out;
+}
+
+.service.animate-in .policy {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
 /* product section  */
 .product{
-  height: 163vh;
+  height: 103vh;
   width: 100%;
 }
 .product-wrapper{
@@ -406,9 +494,30 @@ color: #ffba00;
    margin-top: 20px;
 }
 .shore-container{
-  border: 2px solid red;
   
 }
+.shore-one {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s;
+  padding: 20px;
+}
+.shore-one:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* Icon Container Fade-in */
+.shore-one .icon-container {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+.shore-one:hover .icon-container {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .shore-cont{
   display: flex;
   /* flex-wrap: wrap; */
@@ -416,12 +525,14 @@ color: #ffba00;
   justify-content: space-between;
   gap: 28px;
   margin-top: 60px;
-  border: 6px solid red; 
+    transition: opacity 0.4s ease;
+
 }
 .shore-one img{
 width: 100%;
 height: 39vh;
 }
+
 .shore-one h3{
   margin-top: 20px;
   color: #222222;
@@ -453,6 +564,8 @@ height: 39vh;
   /* overflow: hidden; */
   
 }
+
+
 .fa-solid{
   background-color: #8f96b6;
   height: 30px;
@@ -510,7 +623,7 @@ height: 39vh;
 }
 .exclusive{
   width: 100%;
-  height: 115vh;
+  height: 130vh;
 }
 .exclusive-wrapper{
      width: 100%;
@@ -525,7 +638,7 @@ height: 39vh;
 }
 .count-down{
   width: 50%;
-  height: 100vh;
+  height: 115vh;
   background-image: url(./images/exclusive.jpg.webp);
   background-repeat: no-repeat;
   background-size: cover;
@@ -579,7 +692,6 @@ height: 39vh;
   width: 47%;
   height: 100vh;
   text-align: center;
-  border: 2px solid red;
 }
 .reveal-more{
   display: flex;
@@ -770,14 +882,14 @@ height: 39vh;
 .enter-email i{
   position: absolute;
   background: linear-gradient(to right, #f7b606, #eb8501);
-  position: absolute;
+  /* position: absolute; */
   width: 45px;
   height: 33px;
   border-radius: 0%;
   color: white;
   font-weight:bolder ;
   font-size: 18px;
-  top: 655.2%;
+  top: 613.3%;
   left: 48.7%;
 }
 .instagram{
